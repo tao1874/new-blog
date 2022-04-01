@@ -1,0 +1,97 @@
+:root {
+    --base-hue: 180;
+    --base-sat: 75%;
+
+    /* full color palette, from dark to light */
+    --palette-blue-10: hsl(var(--base-hue), var(--base-sat), 10%);
+    --palette-blue-20: hsl(var(--base-hue), var(--base-sat), 20%);
+    --palette-blue-30: hsl(var(--base-hue), var(--base-sat), 30%);
+    --palette-blue-40: hsl(var(--base-hue), var(--base-sat), 40%);
+    --palette-blue-50: hsl(var(--base-hue), var(--base-sat), 50%);
+    --palette-blue-60: hsl(var(--base-hue), var(--base-sat), 60%);
+    --palette-blue-70: hsl(var(--base-hue), var(--base-sat), 70%);
+    --palette-blue-80: hsl(var(--base-hue), var(--base-sat), 80%);
+    --palette-blue-90: hsl(var(--base-hue), var(--base-sat), 90%);
+    --palette-blue-95: hsl(var(--base-hue), var(--base-sat), 95%);
+
+
+    --primary-lightness: 50%;
+
+    /* primary color in varying opacity levels */
+    --primary: hsl(var(--base-hue), var(--base-sat), var(--primary-lightness));
+    --primary-75: hsla(var(--base-hue), var(--base-sat), var(--primary-lightness), 75%);
+    --primary-50: hsla(var(--base-hue), var(--base-sat), var(--primary-lightness), 50%);
+    --primary-25: hsla(var(--base-hue), var(--base-sat), var(--primary-lightness), 25%);
+    --primary-15: hsla(var(--base-hue), var(--base-sat), var(--primary-lightness), 15%);
+    --primary-10: hsla(var(--base-hue), var(--base-sat), var(--primary-lightness), 10%);
+
+
+    --accent-hue: calc(var(--base-hue) + 90);
+    --accent-lightness: 50%;
+
+    /* accent color in varying opacity levels */
+    --accent: hsl(var(--accent-hue), var(--base-sat), var(--accent-lightness));
+    --accent-75: hsla(var(--accent-hue), var(--base-sat), var(--accent-lightness), 75%);
+    --accent-50: hsla(var(--accent-hue), var(--base-sat), var(--accent-lightness), 50%);
+    --accent-25: hsla(var(--accent-hue), var(--base-sat), var(--accent-lightness), 25%);
+    --accent-15: hsla(var(--accent-hue), var(--base-sat), var(--accent-lightness), 15%);
+    --accent-10: hsla(var(--accent-hue), var(--base-sat), var(--accent-lightness), 10%);
+  }
+  /* reset css */
+  /*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  :root {
+    font-family: 'Roboto', sans-serif;
+  }
+
