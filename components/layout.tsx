@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import UnstyledButton from './UnStyledButton'
 
-const name = 'Tao. Cho'
+const name = 'Random'
 
 export const siteTitle = 'Guo Tao Cho'
 
@@ -16,6 +16,7 @@ const HeaderWrapper = styled.header`
 `
 const Navigation = styled.nav``
 const List = styled.ul`
+  padding: 0;
   list-style: none;
   display: flex;
   align-items: center;
@@ -36,6 +37,12 @@ const NavItemLogo = styled(NavItemLink)`
   font-size: 1.5rem;
 `
 
+const MainContent = styled.main`
+  max-width: 70ch;
+  margin: 0 auto;
+  outline: 1px solid pink;
+  margin-top: 100px;
+`
 export default function Layout({
   children,
   home,
@@ -83,13 +90,13 @@ export default function Layout({
       </Head>
       <MaxWidthWrapper>
         <HeaderWrapper>
-          <h1>
-            <Link href="/" passHref>
-              <NavItemLogo>Tao</NavItemLogo>
-            </Link>
-          </h1>
           <Navigation>
             <List>
+              <ListItem>
+                <Link href="/" passHref>
+                  <NavItemLink>Home</NavItemLink>
+                </Link>
+              </ListItem>
               <ListItem>
                 <Link href="/articles" passHref>
                   <NavItemLink>Articles</NavItemLink>
@@ -100,20 +107,21 @@ export default function Layout({
                   <NavItemLink>Snippets</NavItemLink>
                 </Link>
               </ListItem>
-              <ListItem>
-                <Link href="/about" passHref>
-                  <NavItemLink>About</NavItemLink>
-                </Link>
-              </ListItem>
             </List>
           </Navigation>
           <div>
-            <UnstyledButton>Toggle</UnstyledButton>
+            <UnstyledButton>
+              Dark
+              <input type="checkbox" name="" id="" />
+            </UnstyledButton>
           </div>
         </HeaderWrapper>
       </MaxWidthWrapper>
+      <MaxWidthWrapper> Hi 👋 I'm Tao， and this is my blog</MaxWidthWrapper>
+      <MaxWidthWrapper>
+        <main className="main-container">{children}</main>
+      </MaxWidthWrapper>
 
-      <main>{}</main>
       {!home && (
         <div>
           <Link href="/">

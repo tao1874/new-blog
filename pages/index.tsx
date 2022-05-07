@@ -13,10 +13,7 @@ export default function Home({ posts }: { posts: Post[] }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <p>-------------------------------------------- </p>
-      </section>
-      <section>
-        <h2>Blog</h2>
+        <h2>Featured Posts</h2>
         <ul>
           {posts.map(({ slug, date, title }) => (
             <li key={slug}>
