@@ -45,9 +45,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     mdxOptions: {
       remarkPlugins: [[remarkPrism, {}]],
       rehypePlugins: [],
-      compilers: [],
     },
-    target: ['esnext'],
   })
   return {
     props: {
