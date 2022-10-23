@@ -1,48 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styled from 'styled-components'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import UnstyledButton from './UnStyledButton'
 
-const name = 'Random'
+export const siteTitle = 'Tao - Web Developer,Blogger'
 
-export const siteTitle = 'Guo Tao Cho'
-
-const HeaderWrapper = styled.header`
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-const Navigation = styled.nav``
-const List = styled.ul`
-  padding: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-const ListItem = styled.li`
-  line-height: calc(1em + 0.625rem);
-`
-
-const NavItemLink = styled.a`
-  padding: 10px;
-  text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 500;
-`
-const NavItemLogo = styled(NavItemLink)`
-  font-weight: bold;
-  font-size: 1.5rem;
-`
-
-const MainContent = styled.main`
-  max-width: 70ch;
-  margin: 0 auto;
-  outline: 1px solid pink;
-  margin-top: 100px;
-`
 export default function Layout({
   children,
   home,
@@ -117,7 +81,27 @@ export default function Layout({
           </div>
         </HeaderWrapper>
       </MaxWidthWrapper>
-      <MaxWidthWrapper> Hi 👋 I'm Tao， and this is my blog</MaxWidthWrapper>
+      <MaxWidthWrapper>
+        <SelfIntro>
+          <div>
+            <h2>曹国涛</h2>
+
+            <p>前端工程师</p>
+            <p>
+              在这里分享我作为前端工程师的经验，以及一切我所学到的知识关于 html
+              、css 、JavaScript
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/images/profile.png"
+              alt="profile image"
+              width={'30vw'}
+              height="30vw"
+            />
+          </div>
+        </SelfIntro>
+      </MaxWidthWrapper>
       <MaxWidthWrapper>
         <main className="main-container">{children}</main>
       </MaxWidthWrapper>
@@ -132,3 +116,44 @@ export default function Layout({
     </div>
   )
 }
+
+const HeaderWrapper = styled.header`
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+const Navigation = styled.nav``
+const List = styled.ul`
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+const ListItem = styled.li`
+  line-height: calc(1em + 0.625rem);
+`
+
+const NavItemLink = styled.a`
+  padding: 10px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+`
+const SelfIntro = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const NavItemLogo = styled(NavItemLink)`
+  font-weight: bold;
+  font-size: 1.5rem;
+`
+
+const MainContent = styled.main`
+  max-width: 70ch;
+  margin: 0 auto;
+  outline: 1px solid pink;
+  margin-top: 100px;
+`
