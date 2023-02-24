@@ -75,32 +75,32 @@ export default function Layout({
           </Navigation>
           <div>
             <UnstyledButton>
-              Dark
               <input type="checkbox" name="" id="" />
             </UnstyledButton>
           </div>
         </HeaderWrapper>
       </MaxWidthWrapper>
       <MaxWidthWrapper>
-        <SelfIntro>
-          <div>
-            <h2>曹国涛</h2>
-
+        <ProfileContainer>
+          <ProfileContent>
+            <h1>曹国涛</h1>
             <p>前端工程师</p>
             <p>
-              在这里分享我作为前端工程师的经验，以及一切我所学到的知识关于 html
-              、css 、JavaScript
+              在这里分享我作为前端工程师的经验，以及任何我学到的关于 HTML 、CSS
+              、JavaScript 的知识
             </p>
-          </div>
-          <div>
+          </ProfileContent>
+          <ProfileImage>
             <Image
               src="/images/profile.png"
               alt="profile image"
-              width={'30vw'}
-              height="30vw"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
             />
-          </div>
-        </SelfIntro>
+          </ProfileImage>
+        </ProfileContainer>
       </MaxWidthWrapper>
       <MaxWidthWrapper>
         <main className="main-container">{children}</main>
@@ -118,7 +118,8 @@ export default function Layout({
 }
 
 const HeaderWrapper = styled.header`
-  height: 60px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,20 +131,37 @@ const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: -1rem;
 `
 const ListItem = styled.li`
   line-height: calc(1em + 0.625rem);
 `
 
 const NavItemLink = styled.a`
-  padding: 10px;
+  padding: 1rem;
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 500;
 `
-const SelfIntro = styled.div`
+
+const ProfileContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`
+const ProfileContent = styled.div`
+  margin-right: 2rem;
+  & {
+    > p:nth-child(2) {
+      padding-bottom: 1rem;
+    }
+  }
+`
+const ProfileImage = styled.div`
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  position: relative;
 `
 
 const NavItemLogo = styled(NavItemLink)`
