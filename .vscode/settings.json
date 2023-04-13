@@ -2,5 +2,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "svn.ignoreMissingSvnWarning": true
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  }
 }
