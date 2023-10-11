@@ -83,7 +83,7 @@ export default function Layout({
       <MaxWidthWrapper>
         <ProfileContainer>
           <ProfileContent>
-            <h1>曹国涛</h1>
+            <h1>小明</h1>
             <p>前端工程师</p>
             <p>
               在这里分享我作为前端工程师的经验，以及任何我学到的关于 HTML 、CSS
@@ -92,9 +92,10 @@ export default function Layout({
           </ProfileContent>
           <ProfileImage>
             <Image
-              src="/images/profile.png"
+              src="/images/profile.jpg"
               alt="profile image"
               layout="fill"
+              className="rounded-full"
               sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
