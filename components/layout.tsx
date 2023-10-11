@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import UnstyledButton from './UnStyledButton'
 
-export const siteTitle = 'Tao - Web Developer,Blogger'
+export const siteTitle = 'Cao Guotao - Web Developer,Blogger'
 
 export default function Layout({
   children,
