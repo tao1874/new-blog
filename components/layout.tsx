@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styled from 'styled-components'
 import MaxWidthWrapper from './MaxWidthWrapper'
-import UnstyledButton from './UnStyledButton'
+import ThemeToggle from './ThemeToggle'
 
 export const siteTitle = 'Cao Guotao - Web Developer,Blogger'
 
@@ -50,6 +50,7 @@ export default function Layout({
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
+        <meta name="color-schema" content="dark light"></meta>
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <MaxWidthWrapper>
@@ -73,17 +74,14 @@ export default function Layout({
               </ListItem>
             </List>
           </Navigation>
-          <div>
-            <UnstyledButton>
-              <input type="checkbox" name="" id="" />
-            </UnstyledButton>
-          </div>
+
+          <ThemeToggle />
         </HeaderWrapper>
       </MaxWidthWrapper>
       <MaxWidthWrapper>
         <ProfileContainer>
           <ProfileContent>
-            <h1>小明</h1>
+            <h1>王小明</h1>
             <p>前端工程师</p>
             <p>
               在这里分享我作为前端工程师的经验，以及任何我学到的关于 HTML 、CSS
